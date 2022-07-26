@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #4a98f7;
+        }
+
+        body,
+        .wrapper,
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: 450px;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px 30px 38px;
+        }
+
+        .wrapper img {
+            max-width: 103px;
+        }
+
+        .wrapper h1 {
+            font-size: 35px;
+            font-weight: 500;
+            margin: 30px 0;
+        }
+
+        .wrapper .content {
+            justify-content: space-between;
+            width: 100%;
+        }
+        .wrapper .content.disable{
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .content .column {
+            border: 1px solid #999;
+            padding: 0 10px;
+            border-radius: 5px;
+            width: calc(100%/3 - 5px);
+        }
+
+        .column select {
+            outline: none;
+            border: none;
+            height: 53px;
+            width: 100%;
+            font-size: 19px;
+        }
+
+        .wrapper button {
+            outline: none;
+            border: none;
+            width: 100%;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 17px 0;
+            margin-top: 20px;
+            background: #4a98f7;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="./files/clock.svg" alt="">
+        <h1>00:00:00 </h1>
+        <div class="content">
+            <div class="column">
+                <select>
+                    <option value="HOUR" selected hidden>HOUR</option>
+                </select>
+            </div>
+            <div class="column">
+                <select>
+                    <option value="MINUTE" selected hidden>MINUTE</option>
+                </select>
+            </div>
+            <div class="column">
+                <select>
+                    <option value="AM/PM" selected hidden>AM/PM</option>
+                </select>
+            </div>
+        </div>
+        <button>Set Alarm</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
